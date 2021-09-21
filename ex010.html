@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1>Tickets System</h1>
+    Speed <input type="number" name="speed" id="txtspeed"> miles
+    <input type="button" value="check" onclick="calculate()">
+
+    <div id="result"></div>
+
+
+    <script>
+
+        function calculate() {
+            var txtspeed = window.document.querySelector("input#txtspeed")
+            var result = window.document.querySelector("div#result")
+            var speed = Number(txtspeed.value)
+
+            result.innerHTML = `Your current speed is ${speed} miles`
+
+        }
+
+    </script>
+
+</body>
+
+</html>
