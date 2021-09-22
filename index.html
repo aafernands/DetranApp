@@ -6,29 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detran</title>
-
-</head>
-
-<body>
-    <h1>Tickets System</h1>
-    Speed <input type="number" name="speed" id="txtspeed"> miles
-    <input type="button" value="check" onclick="calculate()">
-
-    <div id="result"></div>
-
-
-    <script>
-
-        function calculate() {
-            var txtspeed = window.document.querySelector("input#txtspeed")
-            var result = window.document.querySelector("div#result")
-            var speed = Number(txtspeed.value)
-
-            result.innerHTML = `Your current speed is ${speed} miles`
-
-        }
-
-    </script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -41,6 +18,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Tickets System</h1>
+    Speed <input type="number" name="speed" id="txtspeed"> miles
+    <input type="button" value="check" onclick="calculate()" class="btn btn-danger">
+
+    <div id="result"></div>
+
+
+    <script>
+
+        function calculate() {
+            var txtspeed = window.document.querySelector("input#txtspeed")
+            var result = window.document.querySelector("div#result")
+            var speed = Number(txtspeed.value)
+
+            result.innerHTML = `</p>Your current speed is <strong>${speed}</strong> miles</p>`
+            if (speed > 60) {
+                result.innerHTML += `You got a <strong>TICKET</strong>`
+            }
+            result.innerHTML += `<p>Drive Safe</p>`
+        }
+
+    </script>
+
 </body>
 
 </html>
